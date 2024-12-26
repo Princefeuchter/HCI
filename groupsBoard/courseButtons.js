@@ -2,7 +2,7 @@ import{createTable} from './table.js';
 export function replaceButton() {
     // This will clear the entire body of the page.
     document.body.innerHTML = "";
-//
+///
     createNewButtons();
   }
   export function createNewButtons() {
