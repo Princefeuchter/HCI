@@ -1,4 +1,4 @@
-// functions.js
+// table.js
 
 export function disableButtons() {
   const buttons = document.querySelectorAll("button");
@@ -23,12 +23,8 @@ function createTable() {
   headerRow.appendChild(th1);
 
   const th2 = document.createElement("th");
-  th2.innerText = "Description";
+  th2.innerText = "Action";
   headerRow.appendChild(th2);
-
-  const th3 = document.createElement("th");
-  th3.innerText = "Action";
-  headerRow.appendChild(th3);
 
   thead.appendChild(headerRow);
   table.appendChild(thead);
@@ -43,38 +39,30 @@ function createTable() {
   row1.appendChild(td1);
 
   const td2 = document.createElement("td");
-  td2.innerText = "This is the description for Group A.";
-  row1.appendChild(td2);
-
-  const td3 = document.createElement("td");
   const joinButton1 = document.createElement("button");
   joinButton1.innerText = "Join";
   joinButton1.onclick = function () {
       alert("You have joined Group A.");
   };
-  td3.appendChild(joinButton1);
-  row1.appendChild(td3);
+  td2.appendChild(joinButton1);
+  row1.appendChild(td2);
 
   tbody.appendChild(row1);
 
   // Row 2: Group B
   const row2 = document.createElement("tr");
+  const td3 = document.createElement("td");
+  td3.innerText = "Group B";
+  row2.appendChild(td3);
+
   const td4 = document.createElement("td");
-  td4.innerText = "Group B";
-  row2.appendChild(td4);
-
-  const td5 = document.createElement("td");
-  td5.innerText = "This is the description for Group B.";
-  row2.appendChild(td5);
-
-  const td6 = document.createElement("td");
   const joinButton2 = document.createElement("button");
   joinButton2.innerText = "Join";
   joinButton2.onclick = function () {
       alert("You have joined Group B.");
   };
-  td6.appendChild(joinButton2);
-  row2.appendChild(td6);
+  td4.appendChild(joinButton2);
+  row2.appendChild(td4);
 
   tbody.appendChild(row2);
 
