@@ -4,14 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blank Out Page</title>
-    <script type="module" src="buttons.js"></script>
+    <script src="courseButtons.js"></script>
   </head>
   <body>
     <!-- Button to blank out the page -->
-    <button
-      onclick="import('./buttons.js').then(module => module.replaceButton())"
-    >
-      Course!
-    </button>
+    <button onclick="replaceButton()">Course!</button>
   </body>
 </html>
