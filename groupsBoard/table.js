@@ -8,6 +8,16 @@ export function disableButtons() {
   createTable();
 }
 
+function disableOtherButtons(exceptButton) {
+  // Select all "Join" buttons and disable all except the clicked one
+  const buttons = document.querySelectorAll("button");
+  buttons.forEach(button => {
+    if (button !== exceptButton) {
+      button.disabled = true; // Disable the other buttons
+    }
+  });
+}
+
 function createTable() {
   // Create a table element
   const table = document.createElement("table");
@@ -42,7 +52,9 @@ function createTable() {
   const joinButton1 = document.createElement("button");
   joinButton1.innerText = "Join";
   joinButton1.onclick = function () {
-      alert("You have joined Group A.");
+    disableOtherButtons(joinButton2);
+    alert("You have joined Group A.");
+
   };
   td2.appendChild(joinButton1);
   row1.appendChild(td2);
@@ -59,6 +71,7 @@ function createTable() {
   const joinButton2 = document.createElement("button");
   joinButton2.innerText = "Join";
   joinButton2.onclick = function () {
+    disableOtherButtons(joinButton1);
       alert("You have joined Group B.");
   };
   td4.appendChild(joinButton2);
