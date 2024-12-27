@@ -52,7 +52,9 @@ function createTable() {
   const joinButton1 = document.createElement("button");
   joinButton1.innerText = "Join";
   joinButton1.onclick = function () {
-    disableOtherButtons(joinButton2);
+    disableOtherButtons(joinButton1);
+    joinButton1.style.backgroundColor = "green"; // Change the color to green
+
     alert("You have joined Group A.");
 
   };
@@ -71,8 +73,9 @@ function createTable() {
   const joinButton2 = document.createElement("button");
   joinButton2.innerText = "Join";
   joinButton2.onclick = function () {
-    disableOtherButtons(joinButton1);
-      alert("You have joined Group B.");
+    disableOtherButtons(joinButton2);
+    alert("You have joined Group B.");
+    joinButton2.style.backgroundColor = "green"; // Change the color to green
   };
   td4.appendChild(joinButton2);
   row2.appendChild(td4);
