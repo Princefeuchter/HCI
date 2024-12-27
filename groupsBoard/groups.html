@@ -6,11 +6,14 @@
     <title>Modularized Code</title>
   </head>
   <body>
+    <button id="courseButton">Course!</button>
     <script type="module">
       import { replaceButton } from "./buttons.js";
 
       // Call replaceButton to start the process
-      replaceButton();
+      document
+        .getElementById("courseButton")
+        .addEventListener("click", replaceButton);
     </script>
   </body>
 </html>
