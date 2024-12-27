@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blank Out Page</title>
-    <script src="courseButtons.js"></script>
+    <title>Modularized Code</title>
   </head>
   <body>
-    <!-- Button to blank out the page -->
-    <button onclick="replaceButton()">Course!</button>
+    <script type="module">
+      import { replaceButton } from "./buttons.js";
+
+      // Call replaceButton to start the process
+      replaceButton();
+    </script>
   </body>
 </html>
