@@ -24,6 +24,18 @@ function disableJoinButtons(exceptButton) {
   });
 }
 
+function enableJoinButtons() {
+  // Select all "Join" buttons
+  const buttons = document.querySelectorAll(".join-button");
+
+  // Loop through each button
+  buttons.forEach(button => {
+    button.disabled = false; // Enable the button
+    button.style.backgroundColor = "#4CAF50"; // Reset the button's background color to green
+    button.style.cursor = "pointer"; // Ensure the cursor is set to pointer
+  });
+}
+
 function createTable() {
   // Create a table element
   const table = document.createElement("table");
@@ -112,6 +124,8 @@ function exit(row, groupName, button) {
     button.style.backgroundColor = "#4CAF50"; // Change back to green
     exitButton.remove();  // Remove the exit button
     alert("You have exited the group.");
+    enableJoinButtons();
+    
   };
   
   // Append the exit button next to the group name in the row
